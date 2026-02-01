@@ -8,8 +8,10 @@
 4. Click **Run workflow** and wait for it to finish
 5. Download the output (artifact)
 
+It'll be **Portmaster-Installer.zip** with **portmaster-installer-offline.exe** inside
 
-## Building locally
+
+## Building locally (I haven't tried this)
 
 [Portmaster](https://github.com/safing/portmaster) offline install, build your own (unsigned) installer.
 
