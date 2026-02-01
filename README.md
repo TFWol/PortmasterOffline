@@ -1,4 +1,15 @@
-# Portmaster Offline Installer
+# Portmaster Offline Installer Builder
+
+## Building it on GitHub
+
+1. Clone/Download this repository
+2. Click **Actions** tab
+3. Click **Build Portmaster Offline**
+4. Click **Run workflow** and wait for it to finish
+5. Download the output (artifact)
+
+
+## Building locally
 
 [Portmaster](https://github.com/safing/portmaster) offline install, build your own (unsigned) installer.
 
@@ -10,7 +21,7 @@ Version : **1.0.13**
 
 NSIS is included so you don't have to install it.
 
-## Howto
+### Howto
 
 Clone/Download this repository
 
