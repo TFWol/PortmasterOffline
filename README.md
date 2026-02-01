@@ -5,7 +5,7 @@
 1. Clone/Download this repository
 2. Click **Actions** tab
 3. Click **Build Portmaster Offline**
-4. Click **Run workflow** and wait for it to finish
+4. Click **Run workflow** and wait for it to finish. Took < 5 min.
 5. Download the output (artifact)
 
 It'll be **Portmaster-Installer.zip** with **portmaster-installer-offline.exe** inside
