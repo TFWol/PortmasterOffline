@@ -1,0 +1,31 @@
+name: Build Portmaster Offline
+
+on:
+  workflow_dispatch: # Allows you to click "Run" manually
+
+jobs:
+  build:
+    runs-on: windows-2019 # Windows 2019 is stable for older NSIS builds
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Move to Clean Directory
+        shell: powershell
+        run: |
+          New-Item -Path "C:\PMO" -ItemType Directory -Force
+          Copy-Item -Path ".\*" -Destination "C:\PMO" -Recurse
+
+      - name: Run Builder Script
+        working-directory: C:\PMO
+        shell: powershell
+        run: |
+          # Script downloads dependencies and runs NSIS
+          .\PortmasterOfflineBuilder.ps1
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Portmaster-Installer
+          path: C:\PMO\portmaster-installer-offline.exe
